@@ -29,12 +29,25 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "fabrication", ">= 0.9.5"
 gem "haml-rails", ">= 0.3.4"
 gem "jquery-rails", ">= 0.2.7"
-gem "rspec-rails", ">= 2.5.0", :group => [:development, :test]
 gem 'activerecord'
 gem 'scruffy'
 gem 'mysql2', '< 0.3'
 gem 'rmagick'
 gem 'rake', "<= 0.8.7"
+
+group :test do
+  gem "database_cleaner", ">= 0.6.7"
+  gem "factory_girl_rails", ">= 1.1.beta1"
+  gem "factory_girl_generator", ">= 0.1.1"
+  gem "capybara"
+  gem "launchy"
+  gem "syntax"
+  gem "simplecov"
+end
+
+group :development, :test do
+  gem "rspec-rails", ">= 2.5.0", :group => [:development, :test]
+  gem "faker"
+end
