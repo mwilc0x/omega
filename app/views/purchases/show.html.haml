@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Id:
+  = @purchase.id
+%p
+  %b Product:
+  = @purchase.product_id
+%p
+  %b Store:
+  = @purchase.store_id
+
+= link_to 'Edit', edit_purchase_path(@purchase)
+\|
+= link_to 'Back', purchases_path
